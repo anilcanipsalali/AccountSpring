@@ -34,7 +34,6 @@ public class CustomerService {
     }
 
     public List<CustomerDto> getAllCustomer() {
-
         return customerRepository.findAll()
                 .stream()
                 .map(converter::convertToCustomerDto)
