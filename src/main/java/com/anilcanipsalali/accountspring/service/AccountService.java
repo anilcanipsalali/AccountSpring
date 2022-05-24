@@ -3,7 +3,6 @@ package com.anilcanipsalali.accountspring.service;
 import com.anilcanipsalali.accountspring.dto.AccountDto;
 import com.anilcanipsalali.accountspring.dto.CreateAccountRequest;
 import com.anilcanipsalali.accountspring.dto.converter.AccountDtoConverter;
-import com.anilcanipsalali.accountspring.exception.AccountNotFoundException;
 import com.anilcanipsalali.accountspring.model.Account;
 import com.anilcanipsalali.accountspring.model.Customer;
 import com.anilcanipsalali.accountspring.model.Transaction;

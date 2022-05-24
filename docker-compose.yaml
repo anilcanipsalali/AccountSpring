@@ -1,0 +1,10 @@
+version: '4.8.2'
+
+services:
+  app:
+    image: 'accountspring:latest'
+    build:
+      context: .
+    container_name: accountspring
+    ports:
+      - 9090:8080
