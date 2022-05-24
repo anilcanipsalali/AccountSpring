@@ -47,7 +47,7 @@ public class AccountService {
 
             account.getTransaction().add(transaction);
         }
-        return converter.convertToAccountDto(accountRepository.save(account));
+        return converter.convert(accountRepository.save(account));
     }
 
     private LocalDateTime getLocalDateTimeNow() {

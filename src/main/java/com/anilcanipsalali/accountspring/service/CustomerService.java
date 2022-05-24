@@ -26,7 +26,6 @@ public class CustomerService {
         return customerRepository.findById(id)
                 .orElseThrow(
                         () -> new CustomerNotFoundException("Customer could not find by id: " + id));
-
     }
 
     public CustomerDto getCustomerById(String customerId) {

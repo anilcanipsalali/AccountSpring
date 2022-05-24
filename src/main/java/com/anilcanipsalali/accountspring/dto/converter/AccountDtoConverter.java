@@ -19,7 +19,7 @@ public class AccountDtoConverter {
         this.transactionDtoConverter = transactionDtoConverter;
     }
 
-    public AccountDto convertToAccountDto(Account from) {
+    public AccountDto convert(Account from) {
         return new AccountDto(from.getId(),
                 from.getBalance(),
                 from.getCreationDate(),
