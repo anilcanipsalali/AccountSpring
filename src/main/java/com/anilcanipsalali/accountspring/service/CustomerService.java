@@ -38,4 +38,9 @@ public class CustomerService {
                 .map(converter::convertToCustomerDto)
                 .collect(Collectors.toList());
     }
+
+    public String deleteCustomer(String customerId) {
+        customerRepository.deleteById(customerId);
+        return "Customer with ID: " +customerId+ " deleted!" ;
+    }
 }

@@ -3,11 +3,9 @@ package com.anilcanipsalali.accountspring.controller;
 import com.anilcanipsalali.accountspring.dto.CustomerDto;
 import com.anilcanipsalali.accountspring.service.CustomerService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,9 +21,12 @@ public class CustomerController {
     public ResponseEntity<CustomerDto> getCustomerById(@PathVariable String customerId) {
         return ResponseEntity.ok(customerService.getCustomerById(customerId));
     }
-
     @GetMapping
     public ResponseEntity<List<CustomerDto>> getAllCustomers() {
         return ResponseEntity.ok(customerService.getAllCustomer());
+    }
+    @DeleteMapping(value ="/{customerId}")
+    public ResponseEntity<?> deleteAccount(@Valid @PathVariable("customerId") String customerId) {
+        return ResponseEntity.ok(customerService.deleteCustomer(customerId));
     }
 }

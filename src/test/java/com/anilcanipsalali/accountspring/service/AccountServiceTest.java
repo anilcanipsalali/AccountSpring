@@ -65,7 +65,7 @@ class AccountServiceTest extends TestSupport {
         when(customerService.findCustomerById("customer-id")).thenReturn(customer);
         when(accountRepository.save(account)).thenReturn(account);
 
-        when(converter.convert(account)).thenReturn(expected);
+        when(converter.convertToAccountDto(account)).thenReturn(expected);
 
         AccountDto result = service.createAccount(request);
 
@@ -82,7 +82,7 @@ class AccountServiceTest extends TestSupport {
 
         when(customerService.findCustomerById("customer-id")).thenReturn(customer);
         when(accountRepository.save(account)).thenReturn(account);
-        when(converter.convert(account)).thenReturn(expected);
+        when(converter.convertToAccountDto(account)).thenReturn(expected);
 
         AccountDto result = service.createAccount(request);
 
